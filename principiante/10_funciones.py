@@ -32,4 +32,13 @@ print_upper_texts("Hello", "World", "Python", "Programming")
 print_upper_texts("Hello")
 
 
+## Argumentos por clave ##
+def describir_persona(nombre, edad, sexo):
+    print(f"El nombre es {nombre}, la edad es {edad} y el sexo es {sexo}")
+
+# describir_persona( "Masculino", "Nicolas", 24 ) ## En este caso se interpretaran los parametros como posicionales
+describir_persona(sexo="Masculino", edad=24, nombre="Nicolas") ## En este caso se interpretaran los parametros como nombrados y aunque no esten en el mismo orden
+
+
+
 
