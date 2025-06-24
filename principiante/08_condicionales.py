@@ -17,7 +17,7 @@ elif my_condition == 25:
     print("Es igual a 25")
 else:
     print("Es menor o igual que 10 o mayor o igual que 20 o distinto a 25")
-    
+
 
 my_string = ""
 
