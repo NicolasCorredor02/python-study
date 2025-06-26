@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  <h1>Proyectos</h1>
+  <div class="subtitle">
+    Aquí puedes visualizar la lista de proyectos registrados en la aplicación.
+  </div>
+  {% if projects %}
+  <ul class="projects-list">
+    {% for project in projects %}
+    <li>
+      <strong>{{ project.name }}</strong>
+      {% if project.description %}
+      <br />
+      <span style="color: #555">{{ project.description }}</span>
+      {% endif %} {% if project.created_at %}
+      <br />
+      <span style="font-size: 0.95em; color: #888">
+        Creado el: {{ project.created_at|date:"d/m/Y" }}
+      </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="no-projects">No hay proyectos registrados actualmente.</div>
+  {% endif %}
+  <div style="margin-top: 30px">
+    <a href="/" class="btn">Volver al inicio</a>
+  </div>
+</div>
+{% endblock %}

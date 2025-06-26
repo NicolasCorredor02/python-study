@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  <h1>Bienvenido a la página principal</h1>
+  <div class="subtitle">
+    Esta es la página de inicio de tu aplicación Django.<br />
+    Explora las funcionalidades y comienza a gestionar tus proyectos y tareas.
+  </div>
+  <a href="/admin/" class="btn">Ir a la aplicación</a>
+  <ul class="features">
+    <li>Visualiza y administra proyectos fácilmente.</li>
+    <li>Gestiona tareas asociadas a cada proyecto.</li>
+    <li>Interfaz sencilla y amigable.</li>
+  </ul>
+  <div style="margin-top: 30px">
+    <h2>Accesos rápidos</h2>
+    <a href="/projects/" class="btn" style="margin-right: 10px"
+      >Ver Proyectos</a
+    >
+    <a href="/tasks/" class="btn">Ver Tarea (ejemplo)</a>
+    <p style="margin-top: 10px; color: #555; font-size: 0.95em">
+      * Para ver una tarea específica, reemplaza
+      <strong>NombreDeTarea</strong> en la URL.
+    </p>
+  </div>
+</div>
+{% endblock %}

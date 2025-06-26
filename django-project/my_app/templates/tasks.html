@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  <div class="header">
+    <h1>📋 Lista de Tareas</h1>
+    <p>Gestiona y visualiza todas tus tareas pendientes</p>
+  </div>
+
+  {% if tasks %}
+  <div class="row">
+    {% for task in tasks %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            {% if task.done %} ✅ {% else %} ⏰ {% endif %} {{ task.title }}
+          </h5>
+          <p class="card-text">{{ task.description }}</p>
+        </div>
+        {% if not task.done %}
+        <button class="btn btn-primary">✅ Completar</button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <h3>📭 No hay tareas disponibles</h3>
+    <p>Comienza creando tu primera tarea para organizar mejor tu trabajo</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
