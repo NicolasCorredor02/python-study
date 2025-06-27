@@ -7,9 +7,8 @@
 
   <div class="card">
     <div class="card-body">
-      {{ form }} {% comment %}
-      <form method="post">
-        {% csrf_token %}
+      <form method="POST">
+        {% csrf_token %} {{ form }} {% comment %}
 
         <div class="form-group">
           <label for="title">Título de la tarea:</label>
@@ -58,7 +57,7 @@
             Marcar como completada
           </label>
         </div>
-
+        {% endcomment %}
         <div class="actions">
           <button type="submit" class="btn btn-primary">
             💾 Guardar Tarea
@@ -66,7 +65,6 @@
           <a href="/tasks/" class="btn btn-secondary">❌ Cancelar</a>
         </div>
       </form>
-      {% endcomment %}
     </div>
   </div>
 </div>

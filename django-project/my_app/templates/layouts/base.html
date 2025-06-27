@@ -313,11 +313,17 @@
           <a href="/" class="brand-link">🚀 Mi App</a>
         </div>
         <ul class="nav-menu">
-          <li><a href="/" class="nav-link">🏠 Inicio</a></li>
-          <li><a href="/projects/" class="nav-link">📁 Proyectos</a></li>
-          <li><a href="/tasks/" class="nav-link">✅ Tareas</a></li>
-          <li><a href="/addtask/" class="nav-link">➕ Agregar tarea</a></li>
-          <li><a href="/about/" class="nav-link">ℹ️ Acerca de</a></li>
+          <li><a href="{% url 'index' %}" class="nav-link">🏠 Inicio</a></li>
+          <li>
+            <a href="{% url 'projects' %}" class="nav-link">📁 Proyectos</a>
+          </li>
+          <li><a href="{% url 'tasks' %}" class="nav-link">✅ Tareas</a></li>
+          <li>
+            <a href="{% url 'create_task' %}" class="nav-link"
+              >➕ Agregar tarea</a
+            >
+          </li>
+          <li><a href="{% url 'about' %}" class="nav-link">ℹ️ Acerca de</a></li>
         </ul>
       </nav>
     </header>
